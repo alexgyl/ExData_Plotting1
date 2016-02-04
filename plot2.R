@@ -19,7 +19,7 @@ sub$DateTime = paste(sub$Date,sub$Time)
 sub$DateTime = ymd_hms(sub$DateTime)
 
 ## Plotting of line graph with date
+png(filename = "plot2.png",width = 480,height = 480)
 plot(y = sub$Global_active_power,x = sub$DateTime,type = "n",ylab = "Global Active Power (kilowatts)", xlab = "")
 lines(x = sub$DateTime,y = sub$Global_active_power)
-dev.copy(png,file = "plot2.png")
 dev.off()
